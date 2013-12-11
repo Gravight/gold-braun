@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#9ACD32"
+    tools:context=".UserinformatioViewActivity" >
+
+    <TextView
+        android:id="@+id/telephoneView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="@string/telephone"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/telephoneField"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/telephoneView"
+        android:layout_alignBottom="@+id/telephoneView"
+        android:layout_alignRight="@+id/postalCodeField"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/nameField"
+        android:src="@drawable/ic_launcher" 
+        android:contentDescription="@string/hfu"
+        
+        />
+
+    <TextView
+        android:id="@+id/postalCodeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/telephoneField"
+        android:layout_alignLeft="@+id/telephoneView"
+        android:text="@string/postalCode"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/postalCodeField"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/postalCodeView"
+        android:layout_alignBottom="@+id/postalCodeView"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/emailView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/postalCodeField"
+        android:layout_alignLeft="@+id/postalCodeView"
+        android:text="@string/email"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/nameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/nameField"
+        android:layout_alignParentLeft="true"
+        android:text="@string/name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/emailField"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/emailView"
+        android:layout_alignLeft="@+id/postalCodeField"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/nameField"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/emailField"
+        android:layout_alignLeft="@+id/emailField"
+        android:ems="10"
+        android:inputType="textPersonName" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/telephoneField"
+        android:layout_below="@+id/telephoneField"
+        android:layout_marginTop="25dp"
+        android:text="@string/reset" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/reset"
+        android:layout_alignLeft="@+id/telephoneField"
+        android:text="@string/submit" />
+
+    <ImageButton
+        android:id="@+id/linkHFU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/telephoneView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/logohfu"
+         android:contentDescription="@string/hfu" />
+
+    <TextView
+        android:id="@+id/welcomeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_alignLeft="@+id/nameView"
+        android:layout_marginLeft="16dp"
+        android:text="@string/welcome"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ProgressBar
+        android:id="@+id/spinner"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/linkHFU"
+        android:layout_alignRight="@+id/reset" />
+
+</RelativeLayout>
